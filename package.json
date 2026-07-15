@@ -1,0 +1,81 @@
+{
+  "name": "ai-telemetry-kit",
+  "version": "1.0.0",
+  "description": "OpenTelemetry for AI applications — track prompts, responses, cost, tokens, traces, and errors with GenAI semantic conventions.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean --sourcemap --external @opentelemetry/api",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+  },
+  "keywords": [
+    "ai",
+    "llm",
+    "opentelemetry",
+    "otel",
+    "telemetry",
+    "observability",
+    "tracing",
+    "tokens",
+    "cost",
+    "prompt",
+    "genai",
+    "openai",
+    "anthropic",
+    "typescript",
+    "nodejs"
+  ],
+  "author": "Anil Kumar <anilachary67@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theinfyark/ai-telemetry-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/theinfyark/ai-telemetry-kit/issues"
+  },
+  "homepage": "https://github.com/theinfyark/ai-telemetry-kit#readme",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/anilachary"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@opentelemetry/api": "^1.9.0"
+  },
+  "peerDependenciesMeta": {
+    "@opentelemetry/api": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/sdk-trace-base": "^2.0.1",
+    "@types/node": "^22.15.30",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.3"
+  }
+}
