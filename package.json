@@ -1,6 +1,6 @@
 {
   "name": "ai-telemetry-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpenTelemetry for AI applications — track prompts, responses, cost, tokens, traces, and errors with GenAI semantic conventions.",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -43,7 +43,12 @@
     "openai",
     "anthropic",
     "typescript",
-    "nodejs"
+    "nodejs",
+    "gpt",
+    "monitoring",
+    "gen-ai",
+    "spans",
+    "distributed-tracing"
   ],
   "author": "Anil Kumar <anilachary67@gmail.com>",
   "license": "MIT",
