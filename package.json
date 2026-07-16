@@ -80,7 +80,7 @@
     "@opentelemetry/sdk-trace-base": "^2.0.1",
     "@types/node": "^22.15.30",
     "tsup": "^8.5.0",
-    "typescript": "^5.8.3",
+    "typescript": "^7.0.2",
     "vitest": "^3.2.3"
   }
 }
