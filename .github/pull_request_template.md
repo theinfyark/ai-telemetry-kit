@@ -16,7 +16,7 @@ Briefly describe what this PR does and why.
 - [ ] Types/docs updated if the public API changed
 - [ ] CHANGELOG.md updated for user-facing changes
 - [ ] No unnecessary dependencies added
-- [ ] Commit messages are clear (no Cursor co-author trailers)
+- [ ] Commit messages are clear (no AI co-author trailers)
 
 ## Test plan
 

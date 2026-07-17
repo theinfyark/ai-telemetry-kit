@@ -18,7 +18,7 @@ npm run build
 - Prefer zero/minimal dependencies
 - Add tests for bug fixes and new features
 - Update `CHANGELOG.md` for user-facing changes
-- Use clear commit messages (do not add Cursor co-author trailers)
+- Use clear commit messages (do not add AI co-author trailers)
 
 ## License
 
