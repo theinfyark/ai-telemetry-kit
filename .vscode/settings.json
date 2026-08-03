@@ -1,0 +1,27 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/.terraform/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/coverage/**": true,
+    "**/.next/**": true,
+    "**/.turbo/**": true
+  },
+
+  "search.exclude": {
+    "**/.git": true,
+    "**/.terraform": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/coverage": true,
+    "**/.next": true,
+    "**/.turbo": true
+  }
+}
+

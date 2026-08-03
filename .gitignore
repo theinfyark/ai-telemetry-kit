@@ -1,8 +1,55 @@
+# Dependencies
 node_modules/
+vendor/
+.pnpm-store/
+
+# Build
 dist/
-.DS_Store
-*.log
-.env
-*.tgz
-.npmrc
+build/
 coverage/
+.next/
+.turbo/
+.cache/
+out/
+target/
+*.tsbuildinfo
+*.tgz
+
+# Environment
+.env
+.env.*
+!.env.example
+.npmrc
+
+# Logs / tmp
+logs/
+*.log
+tmp/
+temp/
+
+# OS / IDE (keep shared settings)
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+*.swo
+
+# Infrastructure
+.terraform/
+.terragrunt-cache/
+*.tfstate
+*.tfstate.*
+
+# Binary / Generated
+*.zip
+*.tar
+*.gz
+*.7z
+*.exe
+*.dll
+*.so
+*.dylib
+

@@ -1,0 +1,64 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Build
+dist/
+build/
+coverage/
+.next/
+.nuxt/
+.svelte-kit/
+.turbo/
+.cache/
+target/
+out/
+
+# Infrastructure
+.terraform/
+.terragrunt-cache/
+
+# Git
+.git/
+
+# IDE
+.vscode-test/
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.*
+
+# Binary / Generated
+*.zip
+*.tar
+*.gz
+*.7z
+*.jar
+*.war
+*.ear
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Images & Documents
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Package Locks (optional)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
