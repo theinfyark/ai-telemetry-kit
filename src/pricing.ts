@@ -53,9 +53,9 @@ export function getRate(
   const table =
     pricing[provider] ?? pricing.openai ?? { default: { input: 0.5, output: 1.5 } };
   if (table[model]) return table[model]!;
-  const fuzzy = Object.entries(table).find(
-    ([k]) => k !== "default" && (model.includes(k) || k.includes(model)),
-  );
+  const fuzzy = Object.entries(table)
+    .filter(([k]) => k !== "default" && model.includes(k))
+    .sort((a, b) => b[0].length - a[0].length)[0];
   if (fuzzy) return fuzzy[1];
   return table.default ?? { input: 0.5, output: 1.5 };
 }

@@ -44,7 +44,7 @@ class NoopTracer implements OtelTracerLike {
   }
 }
 
-let cachedTracer: OtelTracerLike | null | undefined;
+const cachedTracers = new Map<string, OtelTracerLike | null>();
 
 function tryLoadGlobalTracer(serviceName: string): OtelTracerLike | null {
   try {
@@ -65,10 +65,10 @@ export function resolveTracer(
   if (injected && typeof (injected as OtelTracerLike).startSpan === "function") {
     return injected as OtelTracerLike;
   }
-  if (cachedTracer === undefined) {
-    cachedTracer = tryLoadGlobalTracer(serviceName);
+  if (!cachedTracers.has(serviceName)) {
+    cachedTracers.set(serviceName, tryLoadGlobalTracer(serviceName));
   }
-  return cachedTracer ?? new NoopTracer();
+  return cachedTracers.get(serviceName) ?? new NoopTracer();
 }
 
 export function markOk(span: OtelSpanLike) {
@@ -80,7 +80,7 @@ export function markError(span: OtelSpanLike, message: string) {
 }
 
 export function resetTracerCache() {
-  cachedTracer = undefined;
+  cachedTracers.clear();
 }
 
 export { STATUS_ERROR, STATUS_OK };
