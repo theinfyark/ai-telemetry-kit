@@ -81,7 +81,7 @@
     "@types/node": "^22.15.30",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3",
-    "vitest": "^3.2.3"
+    "vitest": "^4.1.11"
   },
   "overrides": {
     "esbuild": ">=0.28.1",
